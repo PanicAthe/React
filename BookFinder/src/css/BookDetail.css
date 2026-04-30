@@ -1,0 +1,97 @@
+.book-detail {
+  background-color: beige;
+  flex: 1;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  overflow-y: auto; /* 상세 정보가 길어질 경우 스크롤 */
+}
+
+.book-detail img {
+  max-width: 200px; /* 원래 크기 */
+  margin-top: 10px;
+}
+
+.book-detail h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.book-detail p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.book-detail a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.book-detail a:hover {
+  text-decoration: underline;
+}
+
+.book-detail .description {
+  white-space: pre-wrap; /* 줄바꿈을 유지하면서 자동으로 텍스트가 줄바꿈되도록 처리 */
+}
+
+/* Improved layout */
+.book-detail .detail-top {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.book-detail .detail-thumb {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.book-detail .detail-info h2 {
+  font-size: 22px;
+}
+
+.book-detail .detail-info .meta,
+.book-detail .detail-info .price,
+.book-detail .detail-info .status {
+  margin: 5px 0;
+  color: var(--text);
+}
+
+.book-detail .external {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.book-detail .description {
+  margin-top: 20px;
+}
+
+.description-text.collapsed {
+  max-height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.description-text.collapsed::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 48px;
+  background: linear-gradient(180deg, rgba(255,255,255,0), var(--bg));
+}
+
+.toggle {
+  display: inline-block;
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+}
